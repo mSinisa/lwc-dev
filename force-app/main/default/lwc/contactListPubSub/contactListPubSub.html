@@ -1,0 +1,26 @@
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="Contact List Pub Sub"
+    icon-name="custom:custom68"
+  >
+    <div class="slds-p-around_small">
+      <template if:true={contacts}>
+        <template for:each={contacts} for:item="contact">
+          <c-contact-tile contact={contact} key={contact.Id}></c-contact-tile>
+          <!-- <div
+            key={contact}
+            class="slds-p-around_small slds-m-around_small slds-theme--shade"
+          >
+            <lightning-icon
+              icon-name="action:user"
+              alternative-text="User"
+              class="slds-m-right_small"
+            ></lightning-icon>
+            {contact.Name}
+          </div> -->
+        </template>
+      </template>
+    </div>
+  </lightning-card>
+</template>

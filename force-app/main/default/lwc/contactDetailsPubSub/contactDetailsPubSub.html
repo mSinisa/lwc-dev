@@ -1,3 +1,21 @@
 <template>
-    
+  <lightning-card title="Contact Details Pub Sub" icon-name="custom:custom68">
+    <div class="slds-p-around_small">
+      <template if:true={contact}>
+        <lightning-record-form
+          record-id={contact.Id}
+          object-api-name={objectApiName}
+          fields={fields}
+          columns="2"
+          onsubmit={handleSubmit}
+        >
+        </lightning-record-form>
+      </template>
+      <template if:false={contact}>
+        <p class=".slds-text-heading_small">
+          Select a Contact from the list to see details
+        </p>
+      </template>
+    </div>
+  </lightning-card>
 </template>
