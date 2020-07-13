@@ -19,6 +19,13 @@ export default class ContactListPubSub extends LightningElement {
   }
 
   connectedCallback() {
+    getContacts({ textSearch: "" })
+      .then(data => {
+        this.contacts = data;
+      })
+      .catch(err => {
+        console.log(error.body.message);
+      });
     registerListener("contactsearch", this.handleSearch, this);
   }
 

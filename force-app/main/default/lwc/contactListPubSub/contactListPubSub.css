@@ -1,0 +1,5 @@
+.contactList {
+  max-height: 400px;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
