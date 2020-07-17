@@ -1,0 +1,47 @@
+<template>
+  <template if:true={car}>
+    <lightning-tabset>
+      <lightning-tab label="Car Detail" value="cardetail">
+        <lightning-card
+          variant="Narrow"
+          title={car.Name}
+          icon-name="utility:travel_and_places"
+        >
+          <lightning-button
+            label="Full Details"
+            title="See full details"
+            onclick={goToCarRecordPage}
+            slot="actions"
+          ></lightning-button>
+          <lightning-layout class="slds-p-around_small">
+            <lightning-layout-item size="6">
+              <p class="bold">Owner Name:</p>
+              <p>{car.Contact__r.Name}</p>
+              <p class="bold">Type:</p>
+              <p>{car.Car_Type__r.Name}</p>
+              <p class="bold">Build Year:</p>
+              <p>{car.Build_Year__c}</p>
+              <p class="bold">Cost Per Day:</p>
+              <p>{car.Per_Day_Rent__c}</p>
+              <p class="bold">Mileage:</p>
+              <p>{car.Mileage__c}</p>
+            </lightning-layout-item>
+            <lightning-layout-item size="6">
+              <img src={car.Picture__c} alt="Car Picture" class="carPic" />
+            </lightning-layout-item>
+          </lightning-layout>
+        </lightning-card>
+
+        <!-- <template if:false={car}>
+        No car selected
+      </template> -->
+      </lightning-tab>
+      <lightning-tab label="Add Experience" value="addexperience">
+        Two Content !
+      </lightning-tab>
+      <lightning-tab label="View Experiences" value="viewexperiences">
+        Three Content !
+      </lightning-tab>
+    </lightning-tabset>
+  </template>
+</template>
