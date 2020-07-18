@@ -15,6 +15,9 @@
         <componentInstances>
             <componentName>carDetails</componentName>
         </componentInstances>
+        <componentInstances>
+            <componentName>carLocation</componentName>
+        </componentInstances>
         <name>region3</name>
         <type>Region</type>
     </flexiPageRegions>

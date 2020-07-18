@@ -29,4 +29,14 @@ export default class CarDetails extends NavigationMixin(LightningElement) {
       }
     });
   }
+
+  experienceAddedHandler() {
+    const viewExperiencesComponent = this.template.querySelector(
+      "c-view-experiences"
+    );
+    if (viewExperiencesComponent) {
+      viewExperiencesComponent.getCarExperiences();
+      this.activeTab = "viewexperiences";
+    }
+  }
 }

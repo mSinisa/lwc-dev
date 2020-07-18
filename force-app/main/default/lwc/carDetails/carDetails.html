@@ -1,6 +1,6 @@
 <template>
   <template if:true={car}>
-    <lightning-tabset>
+    <lightning-tabset active-tab-value={activeTab}>
       <lightning-tab label="Car Detail" value="cardetail">
         <lightning-card
           variant="Narrow"
@@ -37,10 +37,14 @@
       </template> -->
       </lightning-tab>
       <lightning-tab label="Add Experience" value="addexperience">
-        Two Content !
+        <c-add-experience
+          car-id={car.Id}
+          onexperienceadded={experienceAddedHandler}
+        >
+        </c-add-experience>
       </lightning-tab>
       <lightning-tab label="View Experiences" value="viewexperiences">
-        Three Content !
+        <c-view-experiences car-id={car.Id}></c-view-experiences>
       </lightning-tab>
     </lightning-tabset>
   </template>

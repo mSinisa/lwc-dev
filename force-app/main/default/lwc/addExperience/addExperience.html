@@ -1,0 +1,21 @@
+<template>
+  <div class="slds-p-around_small">
+    <lightning-input
+      id="titleInput"
+      type="text"
+      label="Title"
+      onchange={handleTitleChange}
+      class="slds-m-bottom_small"
+    ></lightning-input>
+    <lightning-input-rich-text
+      onchange={handleExperienceChange}
+      class="slds-m-bottom_small"
+    >
+    </lightning-input-rich-text>
+    <lightning-button
+      variant="brand"
+      label="Add Experience"
+      onclick={createExperienceRecord}
+    ></lightning-button>
+  </div>
+</template>

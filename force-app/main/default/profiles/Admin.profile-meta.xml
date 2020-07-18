@@ -37,6 +37,10 @@
         <apexClass>RentACarTestFactory</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>ViewCarExperiencesController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
@@ -78,6 +82,9 @@
         <field>Car__c.Picture__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <layoutAssignments>
+        <layout>Car_Experience__c-Car Experience Layout</layout>
+    </layoutAssignments>
     <layoutAssignments>
         <layout>Car__c-Car Layout</layout>
     </layoutAssignments>
