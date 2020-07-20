@@ -1,0 +1,38 @@
+<template>
+  <template if:true={boatsFound}>
+    <lightning-tabset variant="scoped">
+      <lightning-tab label="Gallery">
+        <div class="slds-scrollable_y">
+          <!-- layout horizontally aligned to the center  -->
+          <!-- layout allowing multiple rows -->
+          <lightning-layout multiple-rows horizontal-align="center">
+            <!-- template looping through each boat -->
+            <template for:each={boats} for:item="boat">
+              <!-- lightning-layout-item for each boat -->
+              <lightning-layout-item
+                key={boat.Id}
+                padding="around-small"
+                size="12"
+                large-device-size="3"
+                medium-device-size="4"
+                small-device-size="6"
+              >
+                <c-boat-tile
+                  boat={boat}
+                  onboatselect={boatSelectHandler}
+                  selected-boat-id={selectedBoatId}
+                ></c-boat-tile>
+              </lightning-layout-item>
+            </template>
+          </lightning-layout>
+        </div>
+      </lightning-tab>
+      <lightning-tab label="Boat Editor" title="2nd tab extended title">
+        Two Content !
+      </lightning-tab>
+      <lightning-tab label="Boats Near Me">
+        Three Content !
+      </lightning-tab>
+    </lightning-tabset>
+  </template>
+</template>
