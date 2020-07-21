@@ -4,7 +4,7 @@
     title="Contact List Pub Sub"
     icon-name="custom:custom68"
   >
-    <div class="slds-p-around_small">
+    <div class="slds-p-around_small contactList">
       <template if:true={contacts}>
         <template for:each={contacts} for:item="contact">
           <c-contact-tile contact={contact} key={contact.Id}></c-contact-tile>
